@@ -13,14 +13,8 @@ It performs requests against our API's for
 - `Forward geocoding`_
 - `Reverse geocoding`_
 - `Timezone`_
-- `Zone management`_
+- `Zone management (API only)`_
 
-For further details, please visit:
-
-- homepage_
-
-
-.. - homepage: https://addresshunt.com.au
 .. _`Autocomplete address`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_autocomplete
 .. _`Matching address`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_match
 .. _`Address validation`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_validate
@@ -45,7 +39,7 @@ To install from PyPI, simply use pip::
 Usage
 ---------------------------------
 
-Basic example
+Example
 
 Autocomplete address
 ^^^^^^^^^^^^^^^^^^^^
@@ -54,16 +48,39 @@ Autocomplete address
     import addresshunt
 
     autocomplete_address = "11 NICHOLSON STREET"
+    match_address = "NICHOLSON STREET"
+    forward_geocode_address = "MELBOURNE MUSEUM, 11 NICHOLSON STREET, CARLTON, VIC, 3053"
+    reverse_geocode_address_latitude = "-37.803165"
+    reverse_geocode_address_longitude = "144.971802"
+    split_address = "MELBOURNE MUSEUM, 11 NICHOLSON STREET, CARLTON, VIC, 3053"
+    timezone_address = "MELBOURNE MUSEUM, 11 NICHOLSON STREET, CARLTON, VIC, 3053"
+    validate_address = "MELBOURNE MUSEUM, 11 NICHOLSON STREET, CARLTON, VIC, 3053"
 
     client = addresshunt.Client(api_key='') # Specify your personal API key
+
     address_list = client.autocomplete(autocomplete_address)
+    print("address_list: \n" + str(address_list) + str('\n'))
 
-    print(address_list)
+    match_list = client.match(match_address)
+    print("match_list: \n" + str(match_list) + str('\n'))
 
-For convenience, all request performing module methods are wrapped inside the ``client`` class. This has the
-disadvantage, that your IDE can't auto-show all positional and optional arguments for the
-different methods. And there are a lot!
+    forward_geocode_list = client.forward_geocode(forward_geocode_address)
+    print("forward_geocode: \n" + str(forward_geocode_list) + str('\n'))
 
+    reverse_geocode_list = client.reverse_geocode(reverse_geocode_address_latitude, reverse_geocode_address_longitude)
+    print("reverse_geocode: \n" + str(reverse_geocode_list) + str('\n'))
+
+    split_list = client.split(split_address)
+    print("split: \n" + str(split_list) + str('\n'))
+
+    timezone_list = client.timezone(timezone_address)
+    print("timezone: \n" + str(timezone_list) + str('\n'))
+
+    validate_list = client.validate(validate_address)
+    print("validate: \n" + str(validate_list) + str('\n'))
+
+
+For convenience, all request performing module methods are wrapped inside the ``client`` class.
 
 
 Dry run
