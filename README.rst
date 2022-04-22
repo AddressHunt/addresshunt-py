@@ -12,7 +12,7 @@ It performs requests against our API's for
 - `Split address`_
 - `Forward geocoding`_
 - `Reverse geocoding`_
-- `Timezone` _
+- `Timezone`_
 - `Zone management`_
 
 For further details, please visit:
@@ -20,7 +20,7 @@ For further details, please visit:
 - homepage_
 
 
-.. -`homepage`: https://addresshunt.com.au
+.. - homepage: https://addresshunt.com.au
 .. _`Autocomplete address`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_autocomplete
 .. _`Matching address`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_match
 .. _`Address validation`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_validate
@@ -48,10 +48,10 @@ Usage
 Basic example
 
 Autocomplete address
-
+^^^^^^^^^^^^^^^^^^^^
 .. code:: python
 
-	import addresshunt
+    import addresshunt
 
     autocomplete_address = "11 NICHOLSON STREET"
 
