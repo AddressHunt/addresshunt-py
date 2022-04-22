@@ -22,7 +22,7 @@ It performs requests against our API's for
 .. _`Forward geocoding`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_forward_geocode
 .. _`Reverse geocoding`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_reverse_geocode
 .. _`Timezone`: https://addresshunt.com.au/api/docs/#/[object%20Object]/get_api_v1_0_address_timezone
-.. _`Zone management`: https://addresshunt.com.au/api/docs/#/Zone%20APIs/get_api_v1_0_zone_check
+.. _`Zone management (API Only)`: https://addresshunt.com.au/api/docs/#/Zone%20APIs/get_api_v1_0_zone_check
 
 
 Requirements
@@ -58,26 +58,26 @@ Autocomplete address
 
     client = addresshunt.Client(api_key='') # Specify your personal API key
 
-    address_list = client.autocomplete(autocomplete_address)
-    print("address_list: \n" + str(address_list) + str('\n'))
+    autocomplete = client.autocomplete(autocomplete_address)
+    print("autocomplete: \n" + str(autocomplete) + str('\n'))
 
-    match_list = client.match(match_address)
-    print("match_list: \n" + str(match_list) + str('\n'))
+    match = client.match(match_address)
+    print("match: \n" + str(match) + str('\n'))
 
-    forward_geocode_list = client.forward_geocode(forward_geocode_address)
-    print("forward_geocode: \n" + str(forward_geocode_list) + str('\n'))
+    forward_geocode = client.forward_geocode(forward_geocode_address)
+    print("forward_geocode: \n" + str(forward_geocode) + str('\n'))
 
-    reverse_geocode_list = client.reverse_geocode(reverse_geocode_address_latitude, reverse_geocode_address_longitude)
-    print("reverse_geocode: \n" + str(reverse_geocode_list) + str('\n'))
+    reverse_geocode = client.reverse_geocode(reverse_geocode_address_latitude, reverse_geocode_address_longitude)
+    print("reverse_geocode: \n" + str(reverse_geocode) + str('\n'))
 
-    split_list = client.split(split_address)
-    print("split: \n" + str(split_list) + str('\n'))
+    split = client.split(split_address)
+    print("split: \n" + str(split) + str('\n'))
 
-    timezone_list = client.timezone(timezone_address)
-    print("timezone: \n" + str(timezone_list) + str('\n'))
+    timezone = client.timezone(timezone_address)
+    print("timezone: \n" + str(timezone) + str('\n'))
 
-    validate_list = client.validate(validate_address)
-    print("validate: \n" + str(validate_list) + str('\n'))
+    validate = client.validate(validate_address)
+    print("validate: \n" + str(validate) + str('\n'))
 
 
 For convenience, all request performing module methods are wrapped inside the ``client`` class.
