@@ -303,16 +303,6 @@ from addresshunt.address import reverse_geocode
 from addresshunt.address import split
 from addresshunt.address import timezone
 from addresshunt.address import validate
-# from addresshunt.distance_matrix import distance_matrix  # noqa
-# from addresshunt.elevation import elevation_point  # noqa
-# from addresshunt.elevation import elevation_line  # noqa
-# from addresshunt.isochrones import isochrones  # noqa
-# from addresshunt.geocode import pelias_search  # noqa
-# from addresshunt.geocode import pelias_autocomplete  # noqa
-# from addresshunt.geocode import pelias_structured  # noqa
-# from addresshunt.geocode import pelias_reverse  # noqa
-# from addresshunt.places import places  # noqa
-# from addresshunt.optimization import optimization  # noqa
 
 
 def _make_api_method(func):
@@ -347,18 +337,6 @@ Client.reverse_geocode = _make_api_method(reverse_geocode)
 Client.split = _make_api_method(split)
 Client.timezone = _make_api_method(timezone)
 Client.validate = _make_api_method(validate)
-
-# Client.distance_matrix = _make_api_method(distance_matrix)
-# Client.elevation_point = _make_api_method(elevation_point)
-# Client.elevation_line = _make_api_method(elevation_line)
-# Client.isochrones = _make_api_method(isochrones)
-# Client.pelias_search = _make_api_method(pelias_search)
-# Client.pelias_autocomplete = _make_api_method(pelias_autocomplete)
-# Client.pelias_structured = _make_api_method(pelias_structured)
-# Client.pelias_reverse = _make_api_method(pelias_reverse)
-# Client.places = _make_api_method(places)
-# Client.optimization = _make_api_method(optimization)
-
 
 def _urlencode_params(params):
     """URL encodes the parameters.
