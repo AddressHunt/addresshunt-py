@@ -15,6 +15,11 @@ It performs requests against our API's for
 - `Timezone`_
 - `Zone management (API only)`_
 
+For further details, please visit:
+
+- homepage_
+
+.. _homepage: https://addresshunt.com.au
 .. _`Autocomplete address`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_autocomplete
 .. _`Matching address`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_match
 .. _`Address validation`: https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_validate
@@ -39,9 +44,7 @@ To install from PyPI, simply use pip::
 Usage
 ---------------------------------
 
-Example
-
-Autocomplete address
+Examples
 ^^^^^^^^^^^^^^^^^^^^
 .. code:: python
 
