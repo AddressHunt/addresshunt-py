@@ -55,7 +55,7 @@ To install from PyPI, simply use pip::
 
 	pip install addresshunt
 
-To install from Anaconda, simply use conda:
+To install from Anaconda, simply use conda::
 
     conda install -c addresshunt addresshunt
 
