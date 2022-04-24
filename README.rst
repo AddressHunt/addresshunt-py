@@ -1,3 +1,15 @@
+
+.. image:: https://anaconda.org/addresshunt/addresshunt/badges/version.svg
+    :target: https://anaconda.org/addresshunt/addresshunt
+.. image:: https://anaconda.org/addresshunt/addresshunt/badges/latest_release_date.svg
+    :target: https://anaconda.org/addresshunt/addresshunt
+.. image:: https://anaconda.org/addresshunt/addresshunt/badges/downloads.svg
+    :target: https://anaconda.org/addresshunt/addresshunt
+.. image:: https://badge.fury.io/py/addresshunt.svg
+    :target: https://badge.fury.io/py/addresshunt
+
+--------------------------------------------------
+
 Quickstart
 ==================================================
 
@@ -36,9 +48,16 @@ addresshunt-py is tested against Python 3.6, 3.7, 3.8 and 3.9, and PyPy3.6 and P
 
 Installation
 ------------------------------
+.. image:: https://anaconda.org/addresshunt/addresshunt/badges/installer/conda.svg
+    :target: https://conda.anaconda.org/addresshunt
+
 To install from PyPI, simply use pip::
 
 	pip install addresshunt
+
+To install from Anaconda, simply use conda::
+
+    conda install -c addresshunt addresshunt
 
 
 Usage
