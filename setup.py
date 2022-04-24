@@ -7,7 +7,7 @@ long_description = (this_directory / "README.rst").read_text()
 
 setup(
     name="addresshunt",
-    version='1.1',
+    version='1.2.1',
     packages=['addresshunt'],
     description='Python package for address validations',
     author='AddressHunt',
