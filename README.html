@@ -1,0 +1,76 @@
+<p><a href="https://anaconda.org/addresshunt/addresshunt"><img src="https://anaconda.org/addresshunt/addresshunt/badges/version.svg" alt="image" /></a></p>
+<p><a href="https://anaconda.org/addresshunt/addresshunt"><img src="https://anaconda.org/addresshunt/addresshunt/badges/latest_release_date.svg" alt="image" /></a></p>
+<p><a href="https://anaconda.org/addresshunt/addresshunt"><img src="https://anaconda.org/addresshunt/addresshunt/badges/downloads.svg" alt="image" /></a></p>
+<p><a href="https://badge.fury.io/py/addresshunt"><img src="https://badge.fury.io/py/addresshunt.svg" alt="image" /></a></p>
+<hr />
+<h1 id="quickstart">Quickstart</h1>
+<h2 id="description">Description</h2>
+<p>The addresshunt package gives you painless access to the addresshunt API's. It performs requests against our API's for</p>
+<ul>
+<li><a href="https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_autocomplete">Autocomplete address</a></li>
+<li><a href="https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_match">Matching address</a></li>
+<li><a href="https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_validate">Address validation</a></li>
+<li><a href="https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_split">Split address</a></li>
+<li><a href="https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_forward_geocode">Forward geocoding</a></li>
+<li><a href="https://addresshunt.com.au/api/docs/#/Address%20APIs/get_api_v1_0_address_reverse_geocode">Reverse geocoding</a></li>
+<li><a href="https://addresshunt.com.au/api/docs/#/%5Bobject%20Object%5D/get_api_v1_0_address_timezone">Timezone</a></li>
+<li><a href="https://addresshunt.com.au/api/docs/#/Zone%20APIs/get_api_v1_0_zone_check">Zone management (API only)</a></li>
+</ul>
+<p>For further details, please visit:</p>
+<ul>
+<li><a href="https://addresshunt.com.au">homepage</a></li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>addresshunt-py is tested against Python 3.6, 3.7, 3.8 and 3.9, and PyPy3.6 and PyPy3.7.</p>
+<h2 id="installation">Installation</h2>
+<p><a href="https://conda.anaconda.org/addresshunt"><img src="https://anaconda.org/addresshunt/addresshunt/badges/installer/conda.svg" alt="image" /></a></p>
+<p>To install from PyPI, simply use pip:</p>
+<pre><code>pip install addresshunt</code></pre>
+<p>To install from Anaconda, simply use conda:</p>
+<pre><code>conda install -c addresshunt addresshunt</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="examples">Examples</h3>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a><span class="im">import</span> addresshunt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true"></a>autocomplete_address <span class="op">=</span> <span class="st">&quot;11 NICHOLSON STREET&quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true"></a>match_address <span class="op">=</span> <span class="st">&quot;NICHOLSON STREET&quot;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true"></a>forward_geocode_address <span class="op">=</span> <span class="st">&quot;MELBOURNE MUSEUM, 11 NICHOLSON STREET, CARLTON, VIC, 3053&quot;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true"></a>reverse_geocode_address_latitude <span class="op">=</span> <span class="st">&quot;-37.803165&quot;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true"></a>reverse_geocode_address_longitude <span class="op">=</span> <span class="st">&quot;144.971802&quot;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true"></a>split_address <span class="op">=</span> <span class="st">&quot;MELBOURNE MUSEUM, 11 NICHOLSON STREET, CARLTON, VIC, 3053&quot;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true"></a>timezone_address <span class="op">=</span> <span class="st">&quot;MELBOURNE MUSEUM, 11 NICHOLSON STREET, CARLTON, VIC, 3053&quot;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true"></a>validate_address <span class="op">=</span> <span class="st">&quot;MELBOURNE MUSEUM, 11 NICHOLSON STREET, CARLTON, VIC, 3053&quot;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true"></a>client <span class="op">=</span> addresshunt.Client(api_key<span class="op">=</span><span class="st">&#39;&#39;</span>) <span class="co"># Specify your personal API key</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true"></a>autocomplete <span class="op">=</span> client.autocomplete(autocomplete_address)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;autocomplete: </span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span> <span class="bu">str</span>(autocomplete) <span class="op">+</span> <span class="bu">str</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true"></a>match <span class="op">=</span> client.match(match_address)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;match: </span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span> <span class="bu">str</span>(match) <span class="op">+</span> <span class="bu">str</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true"></a>forward_geocode <span class="op">=</span> client.forward_geocode(forward_geocode_address)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;forward_geocode: </span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span> <span class="bu">str</span>(forward_geocode) <span class="op">+</span> <span class="bu">str</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true"></a>reverse_geocode <span class="op">=</span> client.reverse_geocode(reverse_geocode_address_latitude, reverse_geocode_address_longitude)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;reverse_geocode: </span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span> <span class="bu">str</span>(reverse_geocode) <span class="op">+</span> <span class="bu">str</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true"></a>split <span class="op">=</span> client.split(split_address)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;split: </span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span> <span class="bu">str</span>(split) <span class="op">+</span> <span class="bu">str</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true"></a>timezone <span class="op">=</span> client.timezone(timezone_address)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;timezone: </span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span> <span class="bu">str</span>(timezone) <span class="op">+</span> <span class="bu">str</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true"></a></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true"></a>validate <span class="op">=</span> client.validate(validate_address)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true"></a><span class="bu">print</span>(<span class="st">&quot;validate: </span><span class="ch">\n</span><span class="st">&quot;</span> <span class="op">+</span> <span class="bu">str</span>(validate) <span class="op">+</span> <span class="bu">str</span>(<span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>))</span></code></pre></div>
+<p>For convenience, all request performing module methods are wrapped inside the <code>client</code> class.</p>
+<h3 id="dry-run">Dry run</h3>
+<p>Although errors in query creation should be handled quite decently, you can do a dry run to print the request and its parameters:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a><span class="im">import</span> addresshunt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true"></a>autocomplete_address <span class="op">=</span> <span class="st">&quot;11 NICHOLSON STREET&quot;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true"></a>client <span class="op">=</span> addresshunt.Client(api_key<span class="op">=</span><span class="st">&#39;&#39;</span>) <span class="co"># Specify your personal API key</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true"></a>address_list <span class="op">=</span> client.autocomplete(autocomplete_address, dry_run<span class="op">=</span><span class="st">&#39;true&#39;</span>)</span></code></pre></div>
+<h2 id="support">Support</h2>
+<p>For issues/bugs/enhancement suggestions, please use <a href="https://github.com/AddressHunt/addresshunt-py/issues">https://github.com/AddressHunt/addresshunt-py/issues</a>.</p>
