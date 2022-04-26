@@ -10,10 +10,10 @@
 
 --------------------------------------------------
 
-Quickstart
+Addresshunt Python Packages
 ==================================================
 
-Description
+APIs Description
 --------------------------------------------------
 The addresshunt package gives you painless access to the addresshunt API's.
 It performs requests against our API's for
